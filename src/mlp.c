@@ -3,7 +3,7 @@
 #include <math.h>
 #include "mlp.h"
 
-doble randd() {
+double randd() {
     return (double)rand()/RAND_MAX;
 }
 
@@ -26,10 +26,6 @@ double sigmoid(double x) {
     double etx = exp(x);//e^x
     double oneup = etx+1;
     return etx/oneup;
-}
-
-double tanh(double x) {
-    return tanh(x);
 }
 
 void create_mlp(MLP *mlp, uint16_t *layer_size, uint8_t num_layers, ForwardFunction function_type) {
